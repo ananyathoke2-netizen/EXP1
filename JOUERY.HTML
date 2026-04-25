@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Demo</title>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+#box{
+width:200px;
+height:100px;
+background:blue;
+color:white;
+padding:10px;
+position:relative;
+}
+</style>
+</head>
+
+<body>
+
+<h2>jQuery Effects</h2>
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+<button id="toggle">Toggle</button>
+<button id="fade">Fade Toggle</button>
+<button id="slide">Slide Toggle</button>
+<button id="animate">Animate</button>
+
+<div id="box">Animated Box</div>
+
+<script>
+
+$(document).ready(function(){
+
+
+
+
+
+$("#hide").click(function(){
+$("#box").hide();
+});
+
+$("#show").click(function(){
+$("#box").show();
+});
+
+$("#toggle").click(function(){
+$("#box").toggle();
+});
+
+$("#fade").click(function(){
+$("#box").fadeToggle();
+});
+
+$("#slide").click(function(){
+$("#box").slideToggle();
+});
+
+$("#animate").click(function(){
+$("#box").animate({top:"100px"});
+});
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>City Monuments</title>
+</head>
+
+<body>
+
+<h3>Select City</h3>
+
+<select id="city" onchange="show()">
+<option value="">Select</option>
+<option>Delhi</option>
+<option>Agra</option>
+<option>Mumbai</option>
+<option>Jaipur</option>
+</select>
+
+<ul id="list"></ul>
+
+<script>
+
+function show(){
+
+let c = document.getElementById("city").value;
+let list = document.getElementById("list");
+
+if(c=="Delhi"){
+list.innerHTML="<li>Red Fort</li><li>Qutub Minar</li>";
+}
+
+else if(c=="Agra"){
+list.innerHTML="<li>Taj Mahal</li><li>Agra Fort</li>";
+}
+
+else if(c=="Mumbai"){
+list.innerHTML="<li>Gateway of India</li>";
+}
+
+else if(c=="Jaipur"){
+list.innerHTML="<li>Hawa Mahal</li>";
+}
+
+else{
+list.innerHTML="";
+}
+
+}
+
+</script>
+
+</body>
+</html>

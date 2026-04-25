@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple To Do</title>
+</head>
+
+<body>
+
+<h3>To Do List</h3>
+
+<input type="text" id="task">
+<button onclick="addTask()">Add</button>
+
+<ul id="list"></ul>
+
+<script>
+
+function addTask(){
+
+let t = document.getElementById("task").value;
+if(t=="") return;
+
+let li = document.createElement("li");
+
+li.innerHTML =
+"<input type='checkbox' onclick='this.nextElementSibling.style.textDecoration = this.checked ? \"line-through\" : \"none\"'> "
++ "<span>"+t+"</span> "
++ "<button onclick='this.parentElement.remove()'>Delete</button>";
+
+document.getElementById("list").appendChild(li);
+
+document.getElementById("task").value="";
+
+}
+
+</script>
+
+</body>
+</html>
